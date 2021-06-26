@@ -50,7 +50,7 @@ def fibonacci_wrapper():
 
 counters = dict()
 
-def global_counter_wrapper(fn):
+def global_counter_wrapper(fn = lambda *args, **kwargs: print("Dummy")):
     """
     This function takes a function as an argument and returns another function which when called will call the function and returns the result of the function.
     
@@ -67,7 +67,7 @@ def global_counter_wrapper(fn):
     return inner
 
 
-def counter_dict_wrapper(fn, counter_dict = dict()):
+def counter_dict_wrapper(fn = lambda *args, **kwargs: print("Dummy"), counter_dict = dict()):
     """
     This function takes 2 parameters as arguments
 
